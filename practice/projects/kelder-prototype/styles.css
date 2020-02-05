@@ -1,0 +1,186 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body, #root, .App {
+  background: #fff;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+a:focus {
+  outline: none;
+}
+
+html {
+  box-sizing: border-box;
+  color: #333;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+html body #root .App .header {
+  height: auto;
+  min-height: 100px;
+  width: 100%;
+}
+html body #root .App .header--container {
+  clear: both;
+  height: 100%;
+  min-height: 100px;
+  width: 100%;
+}
+html body #root .App .header--container--left, html body #root .App .header--container--right {
+  float: left;
+  height: 100%;
+  min-height: 100px;
+  width: 50%;
+}
+html body #root .App .header--container--left {
+  align-items: center;
+  display: flex;
+}
+html body #root .App .header--container--left--wrapper {
+  margin-top: -20px;
+}
+html body #root .App .header--container--left--wrapper h1, html body #root .App .header--container--left--wrapper h2 {
+  font-size: 1.5em;
+  margin-left: 32px;
+}
+html body #root .App .header--container--left--wrapper--text {
+  font-weight: 400;
+  letter-spacing: -2px;
+  margin: 26px 0 -8px;
+}
+html body #root .App .header--container--left--wrapper--date {
+  font-weight: 100;
+  letter-spacing: -1px;
+  margin-top: 0;
+}
+html body #root .App .header--container--right {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+html body #root .App .header--container--right--placeholder {
+  height: 100%;
+  width: 70%;
+}
+html body #root .App .body {
+  height: auto;
+  width: 100%;
+}
+html body #root .App .body .container {
+  height: 80px;
+  width: 100%;
+}
+html body #root .App .body .container--header {
+  font-size: 1.1em;
+  font-weight: 400;
+  height: 22px;
+  line-height: 22px;
+  margin: 0 0 8px 32px;
+}
+html body #root .App .body .container--wrapper {
+  height: 50px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  white-space: nowrap;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+html body #root .App .body .container--wrapper--button {
+  background: #ededed;
+  border-radius: 20px;
+  display: inline-block;
+  font-size: 1.2em;
+  margin-right: 10px;
+  padding: 0.6em 0.7em;
+}
+html body #root .App .body .container--wrapper--button:first-child {
+  margin-left: 20px;
+}
+html body #root .App .body .container--wrapper--button--link {
+  margin: 0;
+}
+html body #root .App .body .container--wrapper--button--toggle {
+  margin-left: 0.3em;
+}
+html body #root .App .body .container.projects {
+  margin-top: 10px;
+}
+html body #root .App .bottom {
+  bottom: 0;
+  height: 206px;
+  left: 0;
+  position: fixed;
+  width: 100%;
+}
+html body #root .App .bottom .most-used-places {
+  background: #ededed;
+  height: 96px;
+  width: 100%;
+}
+html body #root .App .bottom .most-used-places .container {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 96px;
+  justify-content: space-evenly;
+  width: 100%;
+}
+html body #root .App .bottom .most-used-places .container--button {
+  height: 80px;
+  margin-top: 8px;
+  width: 62px;
+}
+html body #root .App .bottom .most-used-places .container--button--circle {
+  align-items: center;
+  background: #fff;
+  border-radius: 50%;
+  color: #808080;
+  display: flex;
+  font-size: 2.9em;
+  height: 62px;
+  justify-content: center;
+  width: 62px;
+}
+html body #root .App .bottom .most-used-places .container--button--text {
+  margin: 0;
+  text-align: center;
+  width: 62px;
+}
+html body #root .App .bottom .home-control {
+  height: 110px;
+  width: 100%;
+}
+html body #root .App .bottom .home-control .container {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  height: 110px;
+  justify-content: space-evenly;
+  width: 100%;
+}
+html body #root .App .bottom .home-control .container--button {
+  align-items: center;
+  background: #ededed;
+  border-radius: 30px;
+  display: flex;
+  height: 50px;
+  padding: 0 0.6em;
+}
+html body #root .App .bottom .home-control .container--button--icon {
+  font-size: 2em;
+  margin-right: 6px;
+}
+html body #root .App .bottom .home-control .container--button--text {
+  font-size: 1.4em;
+}
+
+/*# sourceMappingURL=styles.css.map */

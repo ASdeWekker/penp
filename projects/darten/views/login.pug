@@ -1,0 +1,17 @@
+extends base
+
+block vars
+    -var title = "Login"
+
+block body
+    h1.login Wachtwoord?
+
+    if error
+        p ERROR: #{error}
+
+    form(method="post")
+        input(type="hidden", name="_csrf", value=csrfToken)
+        input.userName(type="text", name="userName", value="darten")
+        span Wachtwoord:
+        input(type="password", name="password", required=true)
+        input(type="submit")
