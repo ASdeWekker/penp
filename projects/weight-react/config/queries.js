@@ -6,6 +6,7 @@ const postWeight = "insert into weight (weight_val, date, notes) values ($1, to_
 const getWeightLimit = "select id,weight_val,date,notes from weight order by date desc limit 10"
 
 module.exports = {
+	getWeight: getWeight,
 	postWeight: postWeight,
-	getWeight: getWeight
+	getWeightLimit: getWeightLimit
 }
