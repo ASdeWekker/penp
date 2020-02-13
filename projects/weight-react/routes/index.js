@@ -15,7 +15,7 @@ client.connect()
 // A route to GET and POST weight.
 router.route("/weight")
 	.get((req, res) => {
-		client.query(queries.getWeight)
+		client.query(queries.getWeightLimit)
 			.then(data => {
 				console.log("Fetched " + data.rows.length + " rows")
 				res.json(data.rows)
