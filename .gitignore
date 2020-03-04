@@ -21,3 +21,6 @@ arduino/sketches/libraries
 .directory
 .env
 build
+secret.txt
+cert.pem
+key.pem
