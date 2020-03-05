@@ -3,18 +3,21 @@ const https = require("https")
 const fs = require("fs")
 
 const app = express()
-
 const port = 3000
+
+const options = {
+	cert: fs.readFileSync("./.ssl-certs/fullchain.pem", "utf8"),
+	key: fs.readFileSync("./.ssl-certs/privkey.pem", "utf8"),
+}
+
 
 app.get("/", (req, res) => {
 	res.send("This is secure")
 })
 
-app.listen(port)
+app.get("/health-check", (req, res) => {
+	res.sendStatus(200)
+})
 
-// https.createServer({
-// 	key: fs.readFileSync("./key.pem", "utf8"),
-// 	cert: fs.readFileSync("./cert.pem", "utf8"),
-// 	passphrase: process.env.JWTSECRETKEY,
-// }, app)
-// 	.listen(port, () => console.log(`App is listening on port ${port}`))
+
+app.listen(port)
