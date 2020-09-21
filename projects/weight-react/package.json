@@ -1,19 +1,19 @@
 {
-  "name": "weight",
-  "version": "1.0.0",
-  "description": "",
-  "main": "weight.js",
-  "scripts": {
-    "server": "nodemon config/server.js",
-    "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
-  },
-  "author": "Alex",
-  "license": "MIT",
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "concurrently": "^5.0.0",
-    "express": "^4.17.1",
-    "pg": "^7.12.1"
-  }
+	"name": "weight",
+	"version": "1.0.0",
+	"description": "",
+	"main": "weight.js",
+	"scripts": {
+		"server": "nodemon config/server.js",
+		"client": "npm start --prefix client",
+		"dev": "concurrently \"npm run server\" \"npm run client\""
+	},
+	"author": "Alex",
+	"license": "MIT",
+	"dependencies": {
+		"body-parser": "^1.19.0",
+		"concurrently": "^5.0.0",
+		"express": "^4.17.1",
+		"pg": "^7.12.1"
+	}
 }
