@@ -27,7 +27,7 @@ class App extends Component {
 		this.setState({ isSubmitting: true })
 
 		// Post the inputted values.
-		const res = await fetch("http://weight-api.alexdw.nl/api/weight", {
+		const res = await fetch("http://localhost:3010/api/weight", {
 			method: "POST",
 			body: JSON.stringify(this.state.values),
 			headers: { "Content-Type": "application/json" }
@@ -64,7 +64,7 @@ class App extends Component {
 
 	// Call the api when this component mounts.
 	componentDidMount() {
-		fetch("http://weight-api.alexdw.nl/api/weight")
+		fetch("http://localhost:3010/api/weight")
 			.then(res => res.json())
 			.then(res => {
 				res.json()
