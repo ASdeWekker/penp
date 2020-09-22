@@ -66,7 +66,6 @@ class App extends Component {
 	componentDidMount() {
 		fetch("/api/weight")
 			.then(res => res.json())
-			.then(res => res.json())
 			.then(weight => this.setState({weight}, () => console.log("Weight fetched...", weight)))
 	}
 
