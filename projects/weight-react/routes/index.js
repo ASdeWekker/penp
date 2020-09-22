@@ -22,7 +22,7 @@ router.route("/weight")
 	.get((req, res) => {
 		client.query(queries.getWeightLimit)
 			.then(data => {
-				res.set("Acces-Control-Allow-Origin", "*")
+				res.set("Access-Control-Allow-Origin", "*")
 				console.log(`Fetched ${data.rows.length} rows`)
 				console.log(`IP: ${req.connection.remoteAddress}`)
 				res.json(data.rows)
