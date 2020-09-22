@@ -17,7 +17,6 @@ router.route("/weight")
 	.get((req, res) => {
 		client.query(queries.getWeightLimit)
 			.then(data => {
-				// console.log("Fetched " + data.rows.length + " rows")
 				console.log(`Fetched ${data.rows.length} rows`)
 				console.log(`IP: ${req.connection.remoteAddress}`)
 				res.json(data.rows)
@@ -29,9 +28,6 @@ router.route("/weight")
 		client.query(queries.postWeight, [weight_val, date, notes])
 			.then(data => {
 				console.log("Inserted data succesfully")
-				// console.log("Date: " + date)
-				// console.log("Weight: " + weight_val)
-				// console.log("Notes: " + notes)
 				console.log(`Date: ${date}`)
 				console.log(`Weight: ${weight_val}`)
 				console.log(`Notes: ${notes}`)

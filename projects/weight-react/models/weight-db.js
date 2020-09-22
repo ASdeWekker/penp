@@ -14,7 +14,6 @@ create table if not exists weight (
 `
 
 // Connect to the database.
-// const connStr = "postgres://" + process.env.PSQLU + ":" + process.env.PSQLW + "@192.168.1.90:5432/dekelder"
 const connStr = `postgres://${process.env.PSQLU}:${process.env.PSQLW}@${process.env.PSQLIP}:${process.env.PSQLPORT}/weight`
 const client = new Client({ connectionString: connStr })
 client.connect()
