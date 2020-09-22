@@ -33,6 +33,7 @@ router.route("/weight")
 		let date = new Date()
 		client.query(queries.postWeight, [weight_val, date, notes])
 			.then(data => {
+				res.set("Access-Control-Allow-Origin", "*")
 				console.log("Inserted data succesfully")
 				console.log(`Date: ${date}`)
 				console.log(`Weight: ${weight_val}`)
