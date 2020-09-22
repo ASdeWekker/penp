@@ -12,11 +12,17 @@ const client = new Client({ connectionString: connStr })
 client.connect()
 
 
+// Send a message to snooping people.
+router.get("/", (req, res) => {
+	res.status(200).json({ "message": "You shouldn't be here" })
+})
+
 // A route to GET and POST weight.
 router.route("/weight")
 	.get((req, res) => {
 		client.query(queries.getWeightLimit)
 			.then(data => {
+				res.set("Acces-Control-Allow-Origin", "*")
 				console.log(`Fetched ${data.rows.length} rows`)
 				console.log(`IP: ${req.connection.remoteAddress}`)
 				res.json(data.rows)

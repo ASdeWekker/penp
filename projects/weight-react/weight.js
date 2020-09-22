@@ -18,6 +18,11 @@ app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({ extended: false }))
 
 
+// A message for snooping people.
+app.get("/", (req, res) => {
+	res.status(200).json({ "message": "You shouldn't be here" })
+})
+
 // Call the routes.
 app.use("/api", indexRouter)
 
