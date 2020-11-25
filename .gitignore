@@ -25,3 +25,4 @@ secret.txt
 cert.pem
 key.pem
 .ssl-certs
+yarn.lock
