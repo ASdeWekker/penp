@@ -33,3 +33,5 @@ lib/
 lib64/
 lib64
 pyvenv.cfg
+.DS_Store
+._.DS_Store
